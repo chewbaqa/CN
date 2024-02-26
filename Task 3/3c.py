@@ -4,7 +4,7 @@
 import socket
 
 c = socket.socket()
-c.connect(("localhost", 12000))
+c.connect_ex(("localhost", 12000))
 c.sendall(b"hello there")
 print(c.recv(1024).decode())
 c.close()

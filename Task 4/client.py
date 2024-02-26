@@ -5,7 +5,7 @@
 import socket
 
 c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-c.connect(("localhost", 54))
+c.connect_ex(("localhost", 54))
 
 while (message := input()) != "BYE":
     c.sendall(message.encode())
